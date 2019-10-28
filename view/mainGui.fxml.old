@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" prefHeight="603.0" prefWidth="1136.0" styleClass="root" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CtrlMainGui">
+   <left>
+      <VBox fx:id="navigation" prefHeight="565.0" styleClass="navRoot" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="163.0" styleClass="navHeader">
+               <children>
+                  <Label layoutX="25.0" layoutY="17.0" style="-fx-text-fill: #d0d0d0;" text="Navigation">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ScrollPane hbarPolicy="NEVER" minHeight="250.0" styleClass="navRoot">
+               <content>
+                  <VBox style="-fx-background-color: #ad0000;">
+                     <children>
+                        <AnchorPane prefHeight="141.0" prefWidth="210.0" style="-fx-border-color: #830000; -fx-border-width: 0 0 1 0;">
+                           <children>
+                              <AnchorPane layoutX="21.0" layoutY="25.0" prefHeight="82.0" prefWidth="82.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+                                 <children>
+                                    <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/avatar/avatarAdmin.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="btnViewProfil" layoutX="111.0" layoutY="76.0" mnemonicParsing="false" styleClass="btnViewProfil">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/setting.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <VBox layoutX="118.0" layoutY="39.0" prefHeight="38.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="sideUsernameUser" style="-fx-text-fill: #fbfbfb;" text="D. Teach" />
+                                    <Label fx:id="fonctionUser" style="-fx-text-fill: #b8b8b8;" text="Resp. Vente" underline="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <HBox prefWidth="223.0">
+                           <children>
+                              <AnchorPane style="-fx-background-color: red;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <image>
+                                          <Image url="@../image/icone/normal/home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Button alignment="BASELINE_LEFT" graphicTextGap="0.0" mnemonicParsing="false" onAction="#showHome" prefHeight="21.0" prefWidth="187.0" styleClass="navButton" text="Home">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefWidth="223.0">
+                           <children>
+                              <AnchorPane style="-fx-background-color: red;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <image>
+                                          <Image url="@../image/icone/normal/dashboard.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane style="-fx-background-color: red;" />
+                              <Button alignment="BASELINE_LEFT" graphicTextGap="0.0" mnemonicParsing="false" onAction="#showDashboard" prefHeight="21.0" prefWidth="187.0" styleClass="navButton" text="Dashboard">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="46.0" prefWidth="223.0">
+                           <children>
+                              <AnchorPane style="-fx-background-color: red;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <image>
+                                          <Image url="@../image/icone/normal/stock.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane style="-fx-background-color: red;" />
+                              <Button alignment="BASELINE_LEFT" graphicTextGap="0.0" mnemonicParsing="false" onAction="#showStock" prefHeight="21.0" prefWidth="187.0" styleClass="navButton" text="Stock">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefWidth="223.0">
+                           <children>
+                              <AnchorPane style="-fx-background-color: red;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <image>
+                                          <Image url="@../image/icone/normal/responsable.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane style="-fx-background-color: red;" />
+                              <Button alignment="BASELINE_LEFT" graphicTextGap="0.0" mnemonicParsing="false" onAction="#showPersonnel" prefHeight="21.0" prefWidth="187.0" styleClass="navButton" text="Responsable">
+                                 <padding>
+                                    <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Accordion prefWidth="223.0" style="-fx-background-color: none;">
+                          <panes>
+                            <TitledPane alignment="TOP_LEFT" animated="false" graphicTextGap="12.0" prefWidth="223.0" text="Creation">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="228.0">
+                                       <children>
+                                          <VBox layoutX="-4.0" prefWidth="228.0">
+                                             <children>
+                                                <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#showCommanderProduit" prefHeight="26.0" prefWidth="223.0" styleClass="navButton" text="Commander produit">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefWidth="224.0" styleClass="navButton" text="Confirmer commande">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#showFormLivraison" prefHeight="26.0" prefWidth="224.0" styleClass="navButton" text="Livraison">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button alignment="TOP_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefWidth="224.0" styleClass="navButton" text="Facture">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/arow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                            </TitledPane>
+                              <TitledPane animated="false" graphicTextGap="12.0" text="Partenaires">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefWidth="227.0">
+                                             <children>
+                                                <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showFournisseur" prefHeight="26.0" prefWidth="224.0" styleClass="navButton" text="Fournisseur">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showClient" prefHeight="26.0" prefWidth="224.0" styleClass="navButton" text="Client">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/arow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </TitledPane>
+                              <TitledPane animated="false" graphicTextGap="12.0" prefWidth="217.0" style="-fx-background-color: transparent;" text="Historiques">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <VBox prefHeight="104.0" prefWidth="222.0">
+                                             <children>
+                                                <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showCommandeHistory" prefHeight="26.0" prefWidth="229.0" styleClass="navButton" text="Commande">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="26.0" prefWidth="226.0" styleClass="navButton" text="Livraison">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="26.0" prefWidth="229.0" styleClass="navButton" text="Facture">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="26.0" prefWidth="231.0" styleClass="navButton" text="Vente">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/arow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="565.0" prefWidth="903.0">
+               <children>
+                  <HBox maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #171717;">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#collapseNav" prefHeight="49.0" prefWidth="44.0" styleClass="btnTransparent">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icone/normal/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="labWindowTitle" prefHeight="49.0" prefWidth="251.0" style="-fx-text-fill: #fbfbfb;" text="Gestionaire de stock">
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Pane maxWidth="1.7976931348623157E308" minWidth="163.0" prefHeight="49.0" prefWidth="212.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="244.0">
+                           <children>
+                              <Button mnemonicParsing="false" style="-fx-background-color: none;">
+                                 <graphic>
+                                    <ImageView fitHeight="9.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/arow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label style="-fx-text-fill: #b8b8b8;" text="Bonjour," />
+                              <Label fx:id="topUsernameUser" style="-fx-text-fill: #f4f4f4;" text="admin" />
+                              <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/avatar/avatarAdmin.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <AnchorPane prefHeight="24.0" prefWidth="41.0">
+                                 <children>
+                                    <Button layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: none;">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="notifImg">
+                                             <image>
+                                                <Image url="@../image/icone/normal/notif.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label alignment="CENTER" layoutX="21.0" layoutY="22.0" prefHeight="20.0" prefWidth="20.0" style="-fx-text-fill: white; -fx-background-color: red; -fx-background-radius: 20;" text="2">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="45.0" right="45.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+                           <children>
+                              <Button fx:id="btnMinimize" mnemonicParsing="false" style="-fx-background-color: none;">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/minimize.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#closeWindow" prefHeight="17.0" prefWidth="17.0" style="-fx-background-color: none;">
+                                 <graphic>
+                                    <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/exit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane prefHeight="516.0" prefWidth="907.0">
+                    <content>
+                      <AnchorPane fx:id="mainCenter" minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="909.0" />
+                    </content>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

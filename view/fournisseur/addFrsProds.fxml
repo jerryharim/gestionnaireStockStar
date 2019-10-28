@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="974.0" style="-fx-background-color: lightgray;" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.fournisseur.CtrlAddFrsProds">
+   <children>
+      <AnchorPane prefHeight="124.0" prefWidth="786.0" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: lightgray;">
+         <children>
+            <Label layoutX="64.0" layoutY="50.0" text="Fournisseur">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="78.0" text="Ajout nouveau fournisseur">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="383.0" prefWidth="786.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="974.0" spacing="10.0" style="-fx-background-color: #e9e9e9;">
+               <children>
+                  <ComboBox fx:id="cbCategorieProd" prefHeight="26.0" prefWidth="125.0" promptText="categorie" styleClass="cb-basic" />
+                  <TextField promptText="Rechercher..." />
+                  <Pane prefHeight="28.0" prefWidth="198.0" />
+                  <CheckBox mnemonicParsing="false" text="Tout" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding></HBox>
+            <VBox layoutX="730.0" prefHeight="428.0" prefWidth="209.0" spacing="10.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="183.0" style="-fx-border-color: lightgray; -fx-border-width: 0 0 1 0;" text="Produits ajouter">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ListView fx:id="lvProdFrs" prefHeight="281.0" prefWidth="179.0" styleClass="lv-basic" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="179.0" text="Total : 6" />
+                  <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnPrevious" mnemonicParsing="false" styleClass="btn-basic">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/icone/normal/arrow3.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#delFrsProds" styleClass="btn-basic">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/icone/normal/croix.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnValidateAdd" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0">
+                           <styleClass>
+                              <String fx:value="btn-basic" />
+                              <String fx:value="btn-ok" />
+                           </styleClass>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/icone/normal/validate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
+            </VBox>
+            <ScrollPane hbarPolicy="NEVER" layoutX="10.0" layoutY="49.0" prefHeight="373.0" prefWidth="706.0" style="-fx-background-color: none;">
+               <content>
+                  <VBox prefWidth="698.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="198.0" style="-fx-background-color: white;" text="Listes des produits">
+                           <padding>
+                              <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <AnchorPane prefWidth="698.0">
+                           <children>
+                              <FlowPane fx:id="fpListeProds" hgap="15.0" minHeight="309.0" minWidth="504.0" prefWidth="695.0" vgap="15.0">
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </FlowPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

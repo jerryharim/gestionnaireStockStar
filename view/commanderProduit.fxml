@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CtrlCommanderProduit">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="858.0" style="-fx-background-color: #dcdcdc;">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="858.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="170.0" text="Commande de produit" />
+                  <Pane prefHeight="30.0" prefWidth="566.0" />
+                  <Button mnemonicParsing="false" onAction="#cancelCommande" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icone/normal/arrowCircle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="810.0" layoutY="20.0" mnemonicParsing="false" onAction="#envoyerCommande" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icone/normal/validate.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="467.0" prefWidth="858.0">
+               <children>
+                  <AnchorPane layoutX="52.0" layoutY="27.0" prefHeight="414.0" prefWidth="471.0" style="-fx-background-color: white;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="-3.0" prefHeight="47.0" prefWidth="469.0" spacing="10.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="154.0" text="Produit ajouter">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="47.0" prefWidth="196.0" />
+                              <Button mnemonicParsing="false" onAction="#updateCmd" style="-fx-background-color: none;">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button mnemonicParsing="false" onAction="#delCurCmd" style="-fx-background-color: none;">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icone/normal/croix.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children></HBox>
+                        <TableView fx:id="table" layoutY="44.0" prefHeight="370.0" prefWidth="484.0" stylesheets="@styles/tableStyle.css">
+                          <columns>
+                            <TableColumn fx:id="colProduit" prefWidth="245.0" text="Produit" />
+                            <TableColumn fx:id="colFrs" minWidth="0.0" prefWidth="126.0" resizable="false" text="Fournisseur" />
+                              <TableColumn fx:id="colQte" prefWidth="105.0" text="Quantité" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="568.0" layoutY="68.0" prefHeight="246.0" prefWidth="239.0" style="-fx-background-color: #cfcfcf;">
+                     <children>
+                        <VBox layoutX="13.0" layoutY="14.0" prefHeight="213.0" prefWidth="213.0" spacing="10.0">
+                           <children>
+                              <VBox prefHeight="165.0" prefWidth="279.0" spacing="10.0">
+                                 <children>
+                                    <Label graphicTextGap="10.0" prefHeight="88.0" prefWidth="213.0" text="Ajouter commande :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="cbProduit" prefHeight="26.0" prefWidth="269.0" promptText="Produit" style="-fx-background-color: none; -fx-border-color: gray; -fx-border-width: 0 0 1 0;" />
+                                    <ComboBox fx:id="cbFournisseur" prefHeight="26.0" prefWidth="269.0" promptText="Fournisseur" style="-fx-background-color: none; -fx-border-color: gray; -fx-border-width: 0 0 1 0;" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Quantité " />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="326.0" spacing="15.0">
+                                             <children>
+                                                <Spinner fx:id="spQuantite" accessibleRole="PAGINATION" editable="true" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: white;" />
+                                                <Label text="Cageots" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin></VBox>
+                                    <HBox prefHeight="29.0" prefWidth="326.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#clearAddCmd" style="-fx-background-color: #00e75c; -fx-text-fill: white; -fx-background-radius: 0;" text="Vider">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#ajouterCommande" style="-fx-background-color: #00a2d0; -fx-text-fill: white; -fx-background-radius: 0;" text="Ajouter">
+                                             <padding>
+                                                <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <DatePicker fx:id="dpDateVoulu" layoutX="568.0" layoutY="27.0" prefHeight="26.0" prefWidth="239.0" promptText="Date livraison voulu" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="container" prefHeight="517.0" prefWidth="868.0" style="-fx-background-color: #dcdcdc;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.responsable.CtrlAddResponsable">
+   <children>
+      <VBox prefHeight="517.0" prefWidth="868.0">
+         <children>
+            <HBox fx:id="hbOptBarAddPers" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="858.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="139.0" text="Ajout personnel" />
+                  <Pane prefHeight="30.0" prefWidth="647.0" />
+                  <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancelAdd" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/icone/normal/arrowCircle.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnValidate" mnemonicParsing="false" onAction="#validateAdd" prefHeight="30.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/icone/normal/validate.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="440.0" prefWidth="868.0">
+               <children>
+                  <AnchorPane layoutX="125.0" layoutY="12.0" prefHeight="432.0" prefWidth="618.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/avatar/avatarDefault.jpg" />
+                           </image>
+                        </ImageView>
+                        <GridPane hgap="20.0" layoutX="209.0" layoutY="21.0" prefHeight="403.0" prefWidth="370.0" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="125.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="204.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="38.0" minHeight="5.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="22.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="58.0" minHeight="4.0" prefHeight="25.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="52.0" minHeight="0.0" prefHeight="27.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="39.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="25.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="26.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="26.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="23.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Nom" />
+                              <TextField fx:id="tfNom" prefHeight="26.0" prefWidth="198.0" GridPane.columnIndex="1" />
+                              <Label text="Prenom" GridPane.rowIndex="1" />
+                              <Label text="Sexe" GridPane.rowIndex="2" />
+                              <TextField fx:id="tfPrenom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Date de naissance" GridPane.rowIndex="4" />
+                              <DatePicker fx:id="dpAniv" prefHeight="26.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Addresse" GridPane.rowIndex="6" />
+                              <Label text="Rue" GridPane.rowIndex="7" />
+                              <Label text="Ville" GridPane.rowIndex="8" />
+                              <Label text="Téléphone" GridPane.rowIndex="9" />
+                              <Label text="Email" GridPane.rowIndex="10" />
+                              <Label text="Nationalité" GridPane.rowIndex="11" />
+                              <TextField fx:id="tfAddresse" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="tfRue" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="tfVille" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField fx:id="tfTel" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <TextField fx:id="tfEmail" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <ComboBox fx:id="cbNationalite" prefHeight="26.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <Label text="CIN" GridPane.rowIndex="3" />
+                              <TextField fx:id="tfCIN" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <RadioButton fx:id="rbMasculin" mnemonicParsing="false" selected="true" text="Masculin">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="sexeToggle" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbFeminin" mnemonicParsing="false" text="Feminin" toggleGroup="$sexeToggle" />
+                                 </children>
+                              </HBox>
+                              <Label text="Fonction" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="cbFonction" prefHeight="26.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="btnChangeAvatar" layoutX="123.0" layoutY="124.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="38.0" style="-fx-background-color: lightgray; -fx-background-radius: 25;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/icone/normal/addWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

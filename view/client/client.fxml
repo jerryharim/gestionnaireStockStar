@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.client.CtrlClient">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="858.0" style="-fx-background-color: #dcdcdc;">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="858.0" style="-fx-background-color: white;">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/icone/normal/affichageSimple.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/icone/normal/affichage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#addNewClient" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/icone/normal/addUser.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox prefHeight="30.0" prefWidth="219.0">
+                     <children>
+                        <TextField fx:id="findInput" onAction="#findClient" promptText="Rechercher" style="-fx-background-color: #dcdcdc; -fx-background-radius: 80 0 0 80;">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#findClient" prefHeight="20.0" prefWidth="40.0" style="-fx-background-color: #dcdcdc; -fx-background-radius: 0 80 80 0;">
+                           <graphic>
+                              <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/icone/normal/find.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnFindMoreOpt" mnemonicParsing="false" onAction="#viewFindMoreOpt" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/icone/normal/moreBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane fx:id="paneFindMoreOpt" prefHeight="96.0" prefWidth="858.0" visible="false">
+               <children>
+                  <Label layoutX="31.0" layoutY="6.0" text="Recherche avancé" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="448.0" prefWidth="811.0">
+               <children>
+                  <ScrollPane layoutX="25.0" prefHeight="425.0" prefWidth="805.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="807.0">
+                           <children>
+                              <TableView fx:id="tableCli" layoutX="-2.0" layoutY="21.0" prefHeight="364.0" prefWidth="810.0" stylesheets="@../styles/tableStyle.css">
+                                 <columns>
+                                    <TableColumn fx:id="colNom" prefWidth="196.0" text="Societe" />
+                                    <TableColumn fx:id="colAdresse" prefWidth="159.0" text="addresse" />
+                                    <TableColumn fx:id="colVille" prefWidth="142.0" text="Ville" />
+                                    <TableColumn fx:id="colTel" prefWidth="149.0" text="Telephone" />
+                                    <TableColumn fx:id="colEmail" prefWidth="238.0" text="Email" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

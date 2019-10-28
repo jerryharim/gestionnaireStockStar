@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="527.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CtrlHistoriqueCommande">
+   <children>
+      <Label layoutX="23.0" layoutY="14.0" text="Historique de commande">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableHistory" layoutX="14.0" layoutY="115.0" prefHeight="366.0" prefWidth="969.0" stylesheets="@../../../../../../../../home/joker/Desktop/STAR/src/view/styles/tableStyle.css">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Numero" />
+          <TableColumn prefWidth="75.0" text="Produit" />
+            <TableColumn prefWidth="75.0" text="Quantite" />
+            <TableColumn prefWidth="135.0" text="Date demande" />
+            <TableColumn prefWidth="212.0" text="Date livraison voulu" />
+            <TableColumn prefWidth="112.0" text="Fournisseur" />
+            <TableColumn minWidth="0.0" prefWidth="284.0" text="Responsable" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="35.0" text="Historique des dernier commande de produits envers les differentes fournisseurs" />
+   </children>
+</AnchorPane>

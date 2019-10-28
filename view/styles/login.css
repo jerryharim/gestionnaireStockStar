@@ -1,0 +1,24 @@
+.root {
+    -fx-background-color: #890e13;
+}
+
+.input {
+    -fx-background-color: none;
+    -fx-border-width: 1;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-font-familly: SansSerif;
+}
+
+.buttonExit {
+    -fx-background-color: none;
+}
+
+.buttonLogin {
+    -fx-background-color: #e7cfd0;
+    -fx-background-radius: 0;
+}
+.buttonLogin:hover {
+    -fx-background-color: #f5ebeb;
+}
+

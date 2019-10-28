@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootHome" minHeight="-Infinity" minWidth="974.0" prefHeight="828.0" prefWidth="974.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CtrlHome">
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="828.0" prefWidth="974.0">
+         <children>
+            <HBox prefHeight="137.0" prefWidth="849.0" spacing="5.0">
+               <children>
+                  <AnchorPane fx:id="header" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="134.0" prefWidth="862.0" style="-fx-background-color: #960000;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label layoutX="68.0" layoutY="59.0" style="-fx-text-fill: #d4d4d4;" text="Heureux de  vous revoir">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labUsername" layoutX="267.0" layoutY="59.0" style="-fx-text-fill: white;" text="Mr Teach!">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="692.0" prefWidth="974.0" style="-fx-background-color: #dcdcdc;">
+               <children>
+                  <Button layoutX="357.0" layoutY="352.0" mnemonicParsing="false" onAction="#showStock" prefHeight="319.0" prefWidth="397.0" style="-fx-background-color: white;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <AnchorPane prefHeight="200.0" prefWidth="379.0" style="-fx-background-color: ;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="252.0" text="STOCK">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="279.0" text="Visualiser l'etat du stock" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="94.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="115.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icone/normal/stockMega.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="97.0" layoutY="46.0" mnemonicParsing="false" onAction="#showDashboard" prefHeight="295.0" prefWidth="397.0" style="-fx-background-color: white;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <AnchorPane prefHeight="200.0" prefWidth="377.0" style="-fx-background-color: ;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="217.0" text="DASHBOARD">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="244.0" text="Visualiser en temps réel les données de l'entreprise" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="136.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icone/normal/dashboardMega.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="504.0" layoutY="46.0" mnemonicParsing="false" onAction="#showCreation" prefHeight="153.0" prefWidth="250.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <AnchorPane prefHeight="200.0" prefWidth="245.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="91.0" text="CREATION">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="110.0" text="Enregistrer les entres et sorties" />
+                              <ImageView fitHeight="76.0" fitWidth="75.0" layoutX="128.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icone/normal/creationMega.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="505.0" layoutY="207.0" mnemonicParsing="false" onAction="#showHistory" prefHeight="134.0" prefWidth="248.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="117.0" layoutY="68.0" text="HISTORIQUE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="93.0" text="Historique des entres et sortie" />
+                              <ImageView fitHeight="71.0" fitWidth="75.0" layoutX="29.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icone/normal/historyMega.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="97.0" layoutY="352.0" mnemonicParsing="false" onAction="#showPartenaire" prefHeight="153.0" prefWidth="250.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <AnchorPane prefHeight="200.0" prefWidth="245.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="91.0" text="PARTENAIRE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="110.0" text="Liste des partenaires" />
+                              <ImageView fitHeight="85.0" fitWidth="109.0" layoutX="107.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icone/normal/partenaire.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="97.0" layoutY="517.0" mnemonicParsing="false" onAction="#showPersonnel" prefHeight="153.0" prefWidth="250.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <AnchorPane prefHeight="200.0" prefWidth="245.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="91.0" text="PERSONNEL">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="110.0" text="Liste des personnels" />
+                              <ImageView fitHeight="82.0" fitWidth="79.0" layoutX="124.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icone/normal/personnelMega.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

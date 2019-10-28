@@ -1,0 +1,18 @@
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: lightgray;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: black;
+}
+
+.table-view .cell {
+    -fx-cell-size: 30;
+    -fx-alignment: center-left;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: lightgray;
+    -fx-text-background-color: black;
+}

@@ -1,0 +1,188 @@
+/* generale configuration */
+.root {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5 0 0 0;
+ }
+.notif-nb {
+    -fx-text-fill: red;
+}
+
+.btnLeft {
+    -fx-background-color:  #ad0000;
+    -fx-text-fill:  #fbfbfb;
+    -fx-background-radius: 0;
+}
+.lightColor {
+    -fx-text-fill:  #fbfbfb;
+}
+
+.btnTransparent {
+    -fx-background-color: none;
+}
+
+/* header -- */
+.header {
+	-fx-background-color: #171717;
+}
+
+/* navigation ===================*/
+.navRoot {
+    -fx-background-color:  #ad0000;
+    -fx-background-radius: 5 0 0 0;
+}
+
+/* customization */
+.navButton {
+    -fx-background-color: none;
+    -fx-background-radius: 0;
+    -fx-text-fill: #fbfbfb;
+}
+.navButton:hover {
+    -fx-background-color:  #960000;
+}
+.navButton:focused {
+    -fx-background-color: #960000;
+}
+
+/* notification  --- */
+#notificationNav {
+ -fx-border-color : #8300000;
+ -fx-border-width :  0 0 1 0;
+}
+
+.accordionBtn {
+    -fx-background-color: #930000;
+    -fx-text-fill: white;
+    -fx-padding-width: 0 0 0 0;
+    -fx-border-radius: 0 0 0 0;
+}
+
+/* button controls */
+.cb-basic, .btn-basic, .lv-basic, .tf-basic {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: lightgray;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+    -fx-background-insets: none;
+}
+
+.lv-basic {
+    -fx-border-width: 0;
+}
+
+/* combo box */
+.cb-basic {
+	
+}
+.cb-custum {
+    -fx-background-color: cyan;
+}
+
+/* button */
+.btn-ok {
+    -fx-background-color: teal;
+    -fx-border-color: none;
+    -fx-text-fill: white;
+}
+
+/* accordion */
+.accordion {
+    -fx-background-color: red;
+}
+
+.titled-pane > *.content {
+   /* -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #850000 0%, #980000 10%);*/
+    -fx-background-color: #850000;
+    -fx-border-color: none;
+    -fx-padding: 6 0 6 0;
+}
+.titled-pane > .title {
+    -fx-background-color: none;
+}
+.titled-pane > .title > .text {
+    -fx-fill: white;
+}
+.titled-pane > .title > .arrow-button {
+    visibility: false;
+    -fx-padding: 0;
+}
+
+/* Account setting */
+.btnViewProfil {
+    -fx-background-color: none;
+}
+
+/* image hovered */
+.notifImg:hover {
+    -fx-image: url("../image/icone/hover/notifHover.png");
+}
+
+/* flow pane */
+.flow-pane {
+}
+
+.flow-pane > .viewport {
+    -fx-border-width: 0;
+}
+
+/* scroll pane */
+.scroll-pane {
+    -fx-background-insets: none;
+    -fx-background-color: none;
+    -fx-padding: 0;
+}
+
+.scroll-pane:focused {
+    -fx-background-insets: transparent;
+}
+
+.scroll-pane > *.content {
+    -fx-background-color: none;
+    -fx-border-width: 0;
+    -fx-border-color: none;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: none;
+    -fx-border-width: 0;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 7;
+}
+.scroll-bar:vertical:hover {
+    -fx-pref-width: 10;
+}
+.scroll-bar:horizontal {
+    -fx-pref-height: 7;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: none;
+    -fx-background-insets: none;
+    visibility: false;
+}
+
+.scroll-bar:horizontal .track, .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(0,0,0,0.2);
+    -fx-background-radius: 5em;
+}
+.scroll-bar:horizontal:hover .thumb, .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
