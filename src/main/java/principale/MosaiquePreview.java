@@ -1,4 +1,4 @@
-package view;
+package principale;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.Property;

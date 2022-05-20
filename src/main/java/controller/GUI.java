@@ -12,8 +12,6 @@ import principale.Main;
 import java.io.IOException;
 import java.net.URL;
 
-import static jdk.nashorn.internal.objects.Global.Infinity;
-
 
 public abstract class GUI {
     /*

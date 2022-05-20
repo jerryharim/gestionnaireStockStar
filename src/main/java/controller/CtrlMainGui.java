@@ -18,7 +18,6 @@ import principale.Main;
 import java.io.IOException;
 import java.util.Optional;
 
-import static jdk.nashorn.internal.objects.Global.Infinity;
 
 
 public class CtrlMainGui extends GUI {
@@ -53,7 +52,7 @@ public class CtrlMainGui extends GUI {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/home.fxml"));
             Pane pane = loader.load();
             VBox.setVgrow(mainCenter, Priority.ALWAYS);
-            mainCenter.setMaxWidth(Infinity);
+            mainCenter.setMaxWidth(Double.MAX_VALUE);
             super.changeChildren(mainCenter, pane);
         } catch (IOException e) {
             e.printStackTrace();

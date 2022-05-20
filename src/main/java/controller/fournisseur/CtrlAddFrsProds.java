@@ -12,7 +12,7 @@ import javafx.scene.text.Font;
 import modele.ModFournisseur;
 import modele.ModProduit;
 import modele.Tools;
-import view.MosaiquePreview;
+import principale.MosaiquePreview;
 
 import java.util.ArrayList;
 import java.util.Hashtable;

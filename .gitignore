@@ -1,2 +1,13 @@
 .idea/
 gestionnaireStockStar.iml
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+build/
+bin/
+.settings/
+.classpath
+.project

@@ -8,7 +8,6 @@ import javafx.scene.layout.Pane;
 import modele.Account;
 import principale.Main;
 
-import static jdk.nashorn.internal.objects.Global.Infinity;
 
 public class CtrlHome extends CtrlMainGui {
     @FXML private Pane rootHome;

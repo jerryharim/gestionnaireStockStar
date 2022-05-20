@@ -15,7 +15,7 @@ import java.sql.Connection;
 
 public class Main extends Application {
     private Stage primaryStage;
-    private static Database db = new Database("starGestionStock", "root", "toor");
+    private static Database db = new Database("starGestionStock", "admin", "admin");
     private static Account account;
 
     @Override
